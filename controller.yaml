@@ -1,0 +1,15 @@
+---
+- name: controller
+  hosts: 192.168.122.237
+  tasks:
+    
+    - name: 'Export'
+      ansible.controller.export:
+        controller_host: '192.168.122.237'
+        controller_username: 'admin'
+        controller_password: 'admin'
+        validate_certs: false
+        job_templates: "ping1"
+        credentials: 'all'
+        
+      
